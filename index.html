@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Word Delight · For you to keep</title>
+<meta name="description" content="2027 Scripture wall calendars with a Bible verse for every day of the year. Two styles, Covenant and Daily Bread, personalized with your church or family name.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Word Delight">
+<meta property="og:description" content="Scripture for you to keep. The 2027 Scripture Wall Calendar is here.">
+<meta property="og:image" content="https://worddelight.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burgundy:#7A1E2C; --burgundy-dark:#5E1621; --gold:#C9962E; --gold-text:#7E5714;
+    --cream:#FBF7EF; --paper:#FFFFFF; --ink:#2B1E21; --muted:#5E5054; --line:#E8DCC6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:var(--burgundy)}
+  a:hover{color:var(--burgundy-dark)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .caps{font-family:'Josefin Sans',Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:14px}
+
+  /* header */
+  header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 24px;max-width:1120px;margin:0 auto}
+  .nav .brand img{height:72px;width:auto}
+  .nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+  .nav ul a{text-decoration:none;color:var(--ink)}
+  .nav ul a:hover{color:var(--burgundy)}
+
+  /* hero */
+  .hero{padding:72px 0 64px;text-align:center}
+  .hero img.logo{width:min(320px,70vw);margin:0 auto 8px}
+  .hero h1{font-family:'Arizonia',cursive;font-weight:400;color:var(--burgundy);font-size:clamp(44px,7vw,76px);line-height:1.1;margin:8px 0 6px}
+  .hero p.lead{max-width:640px;margin:12px auto 28px;color:var(--muted);font-size:22px}
+  .btn{display:inline-block;background:var(--burgundy);color:#fff;text-decoration:none;border:none;cursor:pointer;
+       font-family:'Josefin Sans',Arial,sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:15px;
+       padding:16px 30px;border-radius:2px;min-height:48px}
+  .btn:hover{background:var(--burgundy-dark);color:#fff}
+  .btn.ghost{background:transparent;color:var(--burgundy);border:1.5px solid var(--burgundy)}
+  .btn.ghost:hover{background:var(--burgundy);color:#fff}
+
+  .rule{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--gold);margin:0 auto 18px}
+  .rule::before,.rule::after{content:"";height:1px;width:80px;background:var(--gold)}
+
+  section{padding:72px 0}
+  section h2{font-family:'Arizonia',cursive;font-weight:400;color:var(--burgundy);font-size:clamp(40px,5vw,56px);line-height:1.1;margin:0 0 8px;text-align:center}
+  section .kicker{text-align:center;color:var(--gold-text);margin-bottom:36px}
+
+  /* products */
+  #calendars{padding-top:56px}
+  .product{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:start;padding:12px 0}
+  .gallery .main{background:var(--paper);border:1px solid var(--line);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .gallery .main img{width:100%;height:100%;object-fit:contain}
+  .thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+  .thumb{padding:0;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;aspect-ratio:4/3;overflow:hidden;min-height:44px}
+  .thumb img{width:100%;height:100%;object-fit:cover}
+  .thumb.on{border-color:var(--burgundy)}
+  .thumb:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .info .style{color:var(--gold-text);margin:0}
+  .info h3{font-family:'Arizonia',cursive;font-weight:400;color:var(--burgundy);font-size:48px;line-height:1.1;margin:4px 0 0}
+  .info .sub{font-weight:600;margin:0 0 12px}
+  .features{padding-left:20px;margin:12px 0 22px}
+  .features li{margin:4px 0}
+  .note{color:var(--muted);font-size:17px;margin-top:12px}
+  .divider{border:none;border-top:1px solid var(--line);margin:56px 0}
+  .specs{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;margin:0 0 22px;padding:14px 16px;border:1px solid var(--line);background:var(--paper)}
+  .specs div{margin:0}.specs dt{font-family:'Josefin Sans',Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--gold-text)}
+  .specs dd{margin:0;font-size:18px}
+  #order{background:var(--cream)}
+  .oform fieldset{border:1px solid var(--line);background:var(--paper);padding:18px 20px 8px;margin:0 0 18px}
+  .oform legend{padding:0 6px;color:var(--gold-text)}
+  .oform .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 18px}
+  .oform label{display:flex;flex-direction:column;gap:4px;font-size:17px;margin-bottom:12px}
+  .oform input,.oform select,.oform textarea{font:inherit;font-size:17px;padding:10px 12px;border:1px solid #CDBFA6;border-radius:2px;background:#fff;color:var(--ink);min-height:44px}
+  .oform input:focus,.oform select:focus,.oform textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+  .oform button{margin-top:4px}
+  #personalize{background:var(--paper);border-top:1px solid var(--line)}
+  .narrow{max-width:900px}
+  .band-img{border:1px solid var(--line);margin:0 auto 32px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:28px}
+  .steps h4{font-family:'Josefin Sans',Arial,sans-serif;text-transform:uppercase;letter-spacing:.15em;font-size:15px;color:var(--burgundy);margin:8px 0 4px}
+  .steps p{margin:0;color:var(--muted)}
+  .num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--burgundy);color:#fff;align-items:center;justify-content:center;font-family:'Josefin Sans',Arial,sans-serif;font-size:15px}
+  .center{text-align:center}
+  /* about */
+  .story{max-width:720px;margin:0 auto}
+  .story p{margin:0 0 20px}
+  .story blockquote{margin:28px 0;padding:18px 26px;border-left:3px solid var(--gold);background:var(--paper);font-style:italic}
+  .story blockquote cite{display:block;font-style:normal;margin-top:6px;color:var(--gold-text)}
+  .signature{font-family:'Arizonia',cursive;font-size:40px;color:var(--burgundy);margin-top:8px}
+
+  /* contact */
+  #contact{background:var(--paper);border-top:1px solid var(--line);text-align:center}
+  .contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+
+  footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:16px}
+  footer img{width:56px;margin:0 auto 10px}
+
+  .contact-links .btn{max-width:100%;overflow-wrap:anywhere}
+  @media (max-width:820px){
+    .contact-links .btn{letter-spacing:.06em;font-size:14px;padding:14px 18px}
+    .product{grid-template-columns:1fr;gap:28px}
+    .steps{grid-template-columns:1fr}
+    .nav{flex-direction:column;gap:6px}
+    .nav ul{gap:18px;justify-content:center}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Word Delight home"><img src="assets/logo-horizontal.svg" alt="Word Delight · For you to keep"></a>
+    <ul class="caps">
+      <li><a href="#covenant">Covenant</a></li>
+      <li><a href="#dailybread">Daily Bread</a></li>
+      <li><a href="#personalize">Personalize</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section id="calendars">
+    <div class="wrap">
+      <h2>2027 Scripture Calendars</h2>
+      <p class="kicker caps">A Bible verse for every day of the year</p>
+      
+    <article class="product" id="covenant">
+      <div class="gallery">
+        <div class="main"><img id="covenant-main" src="assets/cal/covenant-1-cover.jpg?v=1795150080" alt="The Covenant Calendar cover: 2027 in four coastal photo tiles with Deuteronomy 11:12"></div>
+        <div class="thumbs" data-for="covenant-main"><button type="button" class="thumb on" data-src="assets/cal/covenant-1-cover.jpg?v=1795150080" aria-label="Cover"><img src="assets/cal/covenant-1-cover.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/covenant-2-month.jpg?v=1795150080" aria-label="Month page"><img src="assets/cal/covenant-2-month.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/covenant-3-week.jpg?v=1795150080" aria-label="Daily verses close-up"><img src="assets/cal/covenant-3-week.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/covenant-4-template.jpg?v=1795150080" aria-label="Personalized header"><img src="assets/cal/covenant-4-template.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/covenant-5-wall.jpg?v=1795150080" aria-label="On the wall"><img src="assets/cal/covenant-5-wall.jpg?v=1795150080" alt=""></button></div>
+      </div>
+      <div class="info">
+        <p class="caps style">Semi-formal</p>
+        <h3>The Covenant Calendar</h3>
+        <p class="sub">2027 Scripture Wall Calendar</p>
+        <p>Classic and elegant, with rich color headers that change every month and refined serif lettering. Made for church lobbies, offices and front rooms, and for congregations who want a calendar that feels timeless.</p>
+        <ul class="features"><li>A King James verse for every day of the year</li><li>A full-page nature photograph for every month</li><li>Holidays, seasons and daylight saving dates</li><li>Personalized header with your name, schedule and QR code</li><li>28 pages: cover, 12 months, important dates, notes and prayer requests, and a 2028 year at a glance</li></ul>
+        <dl class="specs">
+          <div><dt>Page size</dt><dd>12 × 9 in (landscape)</dd></div>
+          <div><dt>Open on the wall</dt><dd>12 × 18 in</dd></div>
+          <div><dt>Pages</dt><dd>28</dd></div>
+          <div><dt>Formats</dt><dd>Printed calendar or printable PDF</dd></div>
+        </dl>
+        <a class="btn order" data-product="covenant" href="#order">Request this calendar</a>
+        <p class="note">Tell us your details and we'll email you a proof and price. No payment needed to ask.</p>
+      </div>
+    </article>
+      <hr class="divider">
+      
+    <article class="product" id="dailybread">
+      <div class="gallery">
+        <div class="main"><img id="dailybread-main" src="assets/cal/dailybread-2-month.jpg?v=1795150080" alt="The Daily Bread Calendar open to September: a waterfall photo above a colorful month page with a verse for every day"></div>
+        <div class="thumbs" data-for="dailybread-main"><button type="button" class="thumb" data-src="assets/cal/dailybread-1-cover.jpg?v=1795150080" aria-label="Cover"><img src="assets/cal/dailybread-1-cover.jpg?v=1795150080" alt=""></button><button type="button" class="thumb on" data-src="assets/cal/dailybread-2-month.jpg?v=1795150080" aria-label="Month page"><img src="assets/cal/dailybread-2-month.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/dailybread-3-week.jpg?v=1795150080" aria-label="Daily verses close-up"><img src="assets/cal/dailybread-3-week.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/dailybread-4-template.jpg?v=1795150080" aria-label="Personalized header"><img src="assets/cal/dailybread-4-template.jpg?v=1795150080" alt=""></button><button type="button" class="thumb" data-src="assets/cal/dailybread-5-wall.jpg?v=1795150080" aria-label="On the wall"><img src="assets/cal/dailybread-5-wall.jpg?v=1795150080" alt=""></button></div>
+      </div>
+      <div class="info">
+        <p class="caps style">Casual</p>
+        <h3>The Daily Bread Calendar</h3>
+        <p class="sub">2027 Scripture Wall Calendar</p>
+        <p>Bright and friendly, with handwritten month names, colorful day labels and rounded, easy-to-read type. Made for kitchens, family rooms and kids' spaces, and for anyone who wants Scripture to feel close and everyday.</p>
+        <ul class="features"><li>A King James verse for every day of the year</li><li>A full-page nature photograph for every month</li><li>Holidays, seasons and daylight saving dates</li><li>Personalized header with your name, schedule and QR code</li><li>28 pages: cover, 12 months, important dates, notes and prayer requests, and a 2028 year at a glance</li></ul>
+        <dl class="specs">
+          <div><dt>Page size</dt><dd>12 × 9 in (landscape)</dd></div>
+          <div><dt>Open on the wall</dt><dd>12 × 18 in</dd></div>
+          <div><dt>Pages</dt><dd>28</dd></div>
+          <div><dt>Formats</dt><dd>Printed calendar or printable PDF</dd></div>
+        </dl>
+        <a class="btn order" data-product="dailybread" href="#order">Request this calendar</a>
+        <p class="note">Tell us your details and we'll email you a proof and price. No payment needed to ask.</p>
+      </div>
+    </article>
+    </div>
+  </section>
+
+  <section id="personalize">
+    <div class="wrap narrow">
+      <h2>Make It Yours</h2>
+      <p class="kicker caps">Personalize the header on every month</p>
+      <img class="band-img" src="assets/cal/covenant-4-template.jpg?v=1795150080" alt="Calendar month header with spaces for your logo, name, address, weekly schedule and QR code">
+      <div class="steps">
+        <div><span class="num">1</span><h4>Your name</h4><p>Your logo plus your church, ministry, business or family name and tagline.</p></div>
+        <div><span class="num">2</span><h4>Your details</h4><p>Address, phone, website and your own QR code, on every month of the year.</p></div>
+        <div><span class="num">3</span><h4>Your schedule</h4><p>Weekly services, Bible studies and events, plus two boxes for announcements.</p></div>
+      </div>
+      <p class="center">Ordering for a congregation? Write to <a href="mailto:hello@worddelight.com">hello@worddelight.com</a> for bulk pricing.</p>
+    </div>
+  </section>
+
+  <section id="about" hidden>
+    <div class="wrap">
+      <h2>Our Story</h2>
+      <p class="kicker caps">The right word at the right time</p>
+      <div class="story">
+        <p>Word Delight began with a church calendar.</p>
+        <p>In 2026 I set out to design a wall calendar for our church family: a scenic photo for every month and a Bible verse for every day of the year. Choosing those verses became the best part. A verse for the first day of school. A verse for a long week. A verse for a season of waiting, and another for a season of harvest. Again and again we saw how the right word, at the right moment, speaks straight to the heart.</p>
+        <p>That is what Word Delight is about. God told His people to keep His words on their hearts and to make them part of everyday life:</p>
+        <blockquote>"You shall write them on the doorposts of your house and on your gates."<cite>Deuteronomy 6:9</cite></blockquote>
+        <p>We make that simple. Our calendars, and soon our mugs, prints and apparel, put His Word in the places you look every day: on the kitchen wall, beside your desk, in your morning coffee.</p>
+        <p>Our mark is an S and a D drawn as one, with a sword running through it. It comes from Hebrews 4:12:</p>
+        <blockquote>"The word of God is living and active, sharper than any two-edged sword … discerning the thoughts and intentions of the heart."<cite>Hebrews 4:12</cite></blockquote>
+        <p>The words on your wall aren't decoration. They are alive, and they speak. Every product is designed verse by verse, with prayer, and we hope the verse in front of you today is exactly the one you need.</p>
+        <p class="signature">Arul</p>
+        <p class="caps" style="color:var(--gold-text);margin-top:-6px">Founder, Word Delight</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="wrap narrow">
+      <h2>Request Your Calendar</h2>
+      <p class="kicker caps">We'll reply by email with a proof and price</p>
+      <form id="orderForm" class="oform" novalidate>
+        <fieldset><legend class="caps">Your calendar</legend>
+          <div class="row">
+            <label>Style<select name="style" id="f-style"><option value="Covenant (semi-formal)">The Covenant Calendar (semi-formal)</option><option value="Daily Bread (casual)">The Daily Bread Calendar (casual)</option></select></label>
+            <label>Format<select name="format"><option>Printed calendar</option><option>Printable PDF</option></select></label>
+            <label>Quantity<input type="number" name="quantity" min="1" value="1"></label>
+          </div>
+        </fieldset>
+        <fieldset><legend class="caps">About you</legend>
+          <div class="row">
+            <label>Your name<input name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel"></label>
+          </div>
+        </fieldset>
+        <fieldset><legend class="caps">Personalization (printed on every month)</legend>
+          <div class="row">
+            <label>Church, ministry or family name<input name="org"></label>
+            <label>Tagline or welcome line<input name="tagline"></label>
+          </div>
+          <div class="row">
+            <label>Address<input name="address" autocomplete="street-address"></label>
+            <label>Phone and website to print<input name="contact"></label>
+          </div>
+          <label>Weekly schedule<textarea name="schedule" rows="3" placeholder="Sunday Worship 10:00 AM, Wednesday Bible Study 7 PM, …"></textarea></label>
+          <label>Anything else? (shipping address, deadline, notes)<textarea name="notes" rows="3"></textarea></label>
+          <p class="note">Have a logo or QR code? Attach it to the email that opens next.</p>
+        </fieldset>
+        <button class="btn" type="submit">Send my request</button>
+        <p class="note" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Say Hello</h2>
+      <p class="kicker caps">Questions, bulk orders for churches, or custom requests</p>
+      <p>We'd love to hear from you.</p>
+      <div class="contact-links">
+        <a class="btn" href="mailto:hello@worddelight.com">hello@worddelight.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="assets/mark.svg" alt="">
+  <div>© <span id="year"></span> Word Delight · worddelight.com</div>
+</footer>
+
+<script>
+const EMAIL = "hello@worddelight.com";
+document.querySelectorAll(".order").forEach(function(a){
+  a.addEventListener("click", function(){
+    var sel = document.getElementById("f-style");
+    sel.selectedIndex = a.dataset.product === "dailybread" ? 1 : 0;
+  });
+});
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var f = e.target, msg = document.getElementById("formMsg");
+  if (!f.name.value.trim() || !f.email.checkValidity() || !f.email.value.trim()) {
+    msg.textContent = "Please add your name and a valid email address."; (f.name.value.trim() ? f.email : f.name).focus(); return;
+  }
+  var d = new FormData(f), lines = [
+    "Calendar: " + d.get("style"), "Format: " + d.get("format"), "Quantity: " + d.get("quantity"), "",
+    "Name: " + d.get("name"), "Email: " + d.get("email"), "Phone: " + (d.get("phone") || "-"), "",
+    "PERSONALIZATION", "Name to print: " + (d.get("org") || "-"), "Tagline: " + (d.get("tagline") || "-"),
+    "Address: " + (d.get("address") || "-"), "Phone / website: " + (d.get("contact") || "-"),
+    "Weekly schedule: " + (d.get("schedule") || "-"), "", "Notes: " + (d.get("notes") || "-")];
+  var subject = "Calendar request: " + d.get("style") + " · " + d.get("name");
+  window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+  msg.textContent = "Your email app should open with everything filled in. Just press Send. If nothing opens, write to " + EMAIL + ".";
+});
+document.querySelectorAll(".thumbs").forEach(function(group){
+  var main = document.getElementById(group.dataset.for);
+  group.querySelectorAll(".thumb").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      main.src = btn.dataset.src;
+      main.alt = btn.getAttribute("aria-label");
+      group.querySelectorAll(".thumb").forEach(function(t){ t.classList.remove("on"); t.removeAttribute("aria-current"); });
+      btn.classList.add("on"); btn.setAttribute("aria-current","true");
+    });
+  });
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
